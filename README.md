@@ -44,7 +44,7 @@ src/
   npm run dev
    ```
 
-# 🤝 Contributing
+## 🤝 Contributing
 We welcome contributions! Please:
 1.Fork the repository
 2.Create a feature branch
@@ -52,8 +52,8 @@ We welcome contributions! Please:
 
 For major changes, please open an issue first to discuss your proposed changes.
 
-# 📩 Contact  
+## 📩 Contact  
 If you have any questions or feedback, feel free to reach out!
 📩 e-mail: dyaphel00@gmail.com   
 
-# 🐉 Dragon's Playground
+### 🐉 Dragon's Playground
