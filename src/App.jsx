@@ -24,15 +24,17 @@ function App() {
     setShowResults(true);
   };
 
-  return (
+ return (
     <div className="bg-gray-50 min-h-screen">
-      <div className="container mx-auto px-4 py-12 max-w-4xl">
+      <div className="container mx-auto px-4 py-8 max-w-4xl"> {/* Reduced py-10 to py-8 */}
         <Header />
         
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
-          <TextInputArea text={text} setText={setText} clearText={clearText} />
-          
-          <div className="bg-gray-50 px-6 py-4 border-t border-gray-200">
+        {/* Reduced margin-bottom from mb-8 to mb-4 on TextInputArea */}
+        <TextInputArea text={text} setText={setText} clearText={clearText} className="mb-4" />
+        
+        {/* Buttons card with reduced top padding */}
+        <div className="bg-gradient-to-r from-indigo-700/90 to-purple-600/90 rounded-xl shadow-lg p-1 backdrop-blur-sm -mt-2"> {/* Added -mt-2 to pull up slightly */}
+          <div className="bg-white/5 rounded-lg p-4 backdrop-blur-xs">
             <MainActionButton
               text={text} 
               showResult={showResult}
@@ -42,6 +44,7 @@ function App() {
           </div>
         </div>
         
+        {/* Results sections remain the same */}
         {showResults && (
           <ResultsDisplay 
             title={result.title} 

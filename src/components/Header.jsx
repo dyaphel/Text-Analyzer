@@ -1,14 +1,14 @@
 const Header = () => {
-
   return (
-    <header className="text-center mb-16 py-12 bg-gradient-to-r from-indigo-900 to-purple-800 rounded-xl shadow-2xl overflow-visible">
-      <div className="max-w-4xl mx-auto px-6">
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-6 py-2 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-purple-200 animate-fade-in">
+    <header className="text-center mb-8 py-2 bg-gradient-to-r from-indigo-900 to-purple-700 rounded-xl shadow-2xl overflow-visible relative">
+      {/* Semi-transparent overlay */}
+      <div className="absolute inset-0 bg-white/5 rounded-xl"></div>
+      
+      <div className="max-w-4xl mx-auto px-6 relative z-10">
+        {/* Main heading with enhanced contrast */}
+        <h1 className="text-5xl md:text-6xl font-extrabold mb-6 py-2 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-purple-200 animate-fade-in drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">
           Text Analyzer
         </h1>
-        <p className="text-lg md:text-xl text-indigo-100 opacity-90 mb-8">
-          Paste your text and analyze it with our <span className="font-semibold text-purple-200">powerful tools</span>
-        </p>
       </div>
     </header>
   );
