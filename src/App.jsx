@@ -3,7 +3,6 @@ import Header from './components/Header';
 import TextInputArea from './components/TextInputArea';
 import MainActionButton from './components/ActionButtons/MainActionButton';
 import ResultsDisplay from './components/ResultsDisplay';
-import CleanTextDisplay from './components/CleanTextDisplay';
 import './App.css';
 
 function App() {
