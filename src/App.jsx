@@ -33,11 +33,10 @@ function App() {
 
     return (
     <div className="bg-gray-50 min-h-screen">
-      <div className="container mx-auto px-4 py-8 max-w-6xl">
+      <div className="container mx-auto px-4 py-8 max-w-7xl">
         <Header />
         
-        <div className={`flex flex-col ${!showResults && !showCleanText ? 'lg:flex-row justify-center' : 'lg:flex-row gap-6'}`}>
-          {/* Colonna sinistra con textarea e pulsanti */}
+        <div className={`flex flex-col  ${!showResults && !showCleanText ? 'lg:flex-row justify-center' : 'lg:flex-row gap-6'}`}>
           <div className={`${!showResults && !showCleanText ? 'w-full max-w-3xl mx-auto' : 'flex-1'}`}>
             <TextInputArea 
               text={text} 

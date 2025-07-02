@@ -1,6 +1,6 @@
 const TextInputArea = ({ text, setText, clearText, className, onClose }) => {
   return (
-    <div className={`p-6 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl shadow-lg border border-indigo-100  ${className}`}>
+    <div className={`p-6  bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl shadow-lg border border-indigo-200 relative w-full ${className}`}>
          
       <div className="relative z-10">
         <div className="flex items-center justify-between mb-4">
