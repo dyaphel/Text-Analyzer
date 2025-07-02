@@ -1,4 +1,4 @@
-const TextInputArea = ({ text, setText, clearText, className  }) => {
+const TextInputArea = ({ text, setText, clearText, className, onClose   }) => {
   return (
      <div className={`p-6 bg-white rounded-xl shadow-lg border border-gray-200 ${className}`}>
       <div className="relative z-10">

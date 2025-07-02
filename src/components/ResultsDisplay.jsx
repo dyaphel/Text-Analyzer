@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const ResultsDisplay = ({ title, content, isHTML }) => {
+const ResultsDisplay = ({ title, content, isHTML, onClose  }) => {
   const [copyState, setCopyState] = useState({ 
     text: 'Copy', 
     icon: 'fa-copy' 
@@ -19,6 +19,14 @@ const ResultsDisplay = ({ title, content, isHTML }) => {
 
   return (
     <div className="bg-white rounded-xl shadow-lg border border-gray-200">
+        <div className="bg-white rounded-xl shadow-lg border border-gray-200 relative">
+      {/* Pulsante di chiusura */}
+      <button 
+        onClick={onClose}
+        className="absolute top-3 right-3 text-gray-400 hover:text-gray-600 transition-colors"
+      >
+        <i className="fas fa-times"></i>
+      </button>
       <div className="p-6">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-semibold text-gray-800">
@@ -44,6 +52,7 @@ const ResultsDisplay = ({ title, content, isHTML }) => {
         </div>
       </div>
     </div>
+  </div>
   );
 };
 

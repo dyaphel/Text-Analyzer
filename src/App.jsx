@@ -23,17 +23,34 @@ function App() {
     setShowResults(true);
   };
 
+  const closeResults = () => {
+    setShowResults(false);
+  };
+
+  const closeCleanText = () => {
+    setShowCleanText(false);
+  };
+
   return (
     <div className="bg-gray-50 min-h-screen">
-      <div className="container mx-auto px-4 py-8 max-w-6xl"> {/* Aumentato a max-w-6xl */}
+      <div className="container mx-auto px-4 py-8 max-w-6xl">
         <Header />
         
-        <div className="flex flex-col lg:flex-row gap-6"> {/* Aggiunto flex container */}
+        <div className={`flex flex-col ${!showResults && !showCleanText ? 'lg:flex-row justify-center' : 'lg:flex-row gap-6'}`}>
           {/* Colonna sinistra con textarea e pulsanti */}
-          <div className="flex-1">
-            <TextInputArea text={text} setText={setText} clearText={clearText} className="mb-4" />
+          <div className={`${!showResults && !showCleanText ? 'w-full max-w-3xl mx-auto' : 'flex-1'}`}>
+            <TextInputArea 
+              text={text} 
+              setText={setText} 
+              clearText={clearText} 
+              className="mb-4"
+              onClose={!showResults && !showCleanText ? null : () => {
+                setShowResults(false);
+                setShowCleanText(false);
+              }}
+            />
             
-            {/* Buttons card con stile più chiaro */}
+            {/* Buttons card */}
             <div className="bg-gradient-to-r from-indigo-100 to-purple-100 rounded-xl shadow-lg p-1 -mt-2">
               <div className="bg-white/80 rounded-lg p-4">
                 <MainActionButton
@@ -47,19 +64,25 @@ function App() {
           </div>
           
           {/* Colonna destra per i risultati */}
-          <div className="flex-1">
-            {showResults && (
+          {showResults && (
+            <div className="flex-1">
               <ResultsDisplay 
                 title={result.title} 
                 content={result.content} 
-                isHTML={result.isHTML} 
+                isHTML={result.isHTML}
+                onClose={closeResults}
               />
-            )}
-            
-            {showCleanText && (
-              <CleanTextDisplay cleanText={cleanText} />
-            )}
-          </div>
+            </div>
+          )}
+          
+          {showCleanText && (
+            <div className="flex-1">
+              <CleanTextDisplay 
+                cleanText={cleanText} 
+                onClose={closeCleanText}
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>
