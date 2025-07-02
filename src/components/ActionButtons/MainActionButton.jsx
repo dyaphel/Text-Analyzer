@@ -8,7 +8,7 @@ const ActionButtons = ({ text, showResult, setCleanText, setShowCleanText }) => 
     <div className="p-6 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl shadow-lg border border-indigo-100">
       <div className="flex flex-wrap gap-4">
         <CountWithSpaces text={text} showResult={showResult} />
-        <CountWithoutSpaces text={text} showResult={showResult} />
+        <CountWithoutSpaces text={text} showResult={showResult}  />
         <CountWords text={text} showResult={showResult} />
         <DoubleSpaces 
           text={text} 
