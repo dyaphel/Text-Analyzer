@@ -18,16 +18,16 @@ const ResultsDisplay = ({ title, content, isHTML }) => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-indigo-500 to-purple-400 rounded-xl shadow-lg mb-8 border border-indigo-700/30">
+    <div className="bg-white rounded-xl shadow-lg border border-gray-200">
       <div className="p-6">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold text-indigo-100 drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]">
+          <h2 className="text-xl font-semibold text-gray-800">
             {title}
           </h2>
           {isHTML && (
             <button 
               onClick={handleCopy}
-              className="flex items-center text-indigo-100 hover:text-white transition-colors duration-200 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg backdrop-blur-sm"
+              className="flex items-center text-gray-700 hover:text-gray-900 transition-colors duration-200 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg"
             >
               <i className={`fas ${copyState.icon} mr-2`}></i>
               {copyState.text}
@@ -35,7 +35,7 @@ const ResultsDisplay = ({ title, content, isHTML }) => {
           )}
         </div>
         <div 
-          className="bg-gray-200/80 rounded-lg border border-gray-400/50 p-4 min-h-20 whitespace-pre-wrap backdrop-blur-sm"
+          className="bg-gray-50 rounded-lg border border-gray-200 p-4 min-h-20 whitespace-pre-wrap"
           dangerouslySetInnerHTML={isHTML ? { __html: content } : null}
         >
           {!isHTML && (

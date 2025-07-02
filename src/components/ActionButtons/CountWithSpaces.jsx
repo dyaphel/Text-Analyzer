@@ -10,15 +10,14 @@ const CountWithSpaces = ({ text, showResult }) => {
   };
 
   return (
-  <button 
-   onClick={countWithSpaces}
-  className={`${buttonBaseClasses} relative overflow-hidden bg-gradient-to-r from-indigo-900 to-purple-700 hover:from-indigo-500 hover:to-purple-400`}
->
-  <span className="absolute inset-0 bg-white/5"></span>
-  <span className="relative text-white font-medium">
-    <i className="fas fa-text-width mr-2"></i>  Count (with spaces)
-  </span>
-</button>
+      <button 
+       onClick={countWithSpaces}
+      className={`${buttonBaseClasses} bg-white hover:bg-gray-100 border border-gray-200`}
+    >
+      <span className="text-gray-800 font-medium">
+         <i className="fas fa-text-width mr-2 text-indigo-600"></i>Count (with spaces)
+      </span>
+    </button>
   );
 };
 

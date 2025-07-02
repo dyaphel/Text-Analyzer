@@ -11,13 +11,12 @@ const CountWithoutSpaces = ({ text, showResult }) => {
   };
 
   return (
-      <button 
+    <button 
       onClick={countNoSpaces}
-      className={`${buttonBaseClasses} relative overflow-hidden bg-gradient-to-r from-indigo-900 to-purple-700 hover:from-indigo-500 hover:to-purple-400`}
+      className={`${buttonBaseClasses} bg-white hover:bg-gray-100 border border-gray-200`}
     >
-      <span className="absolute inset-0 bg-white/5"></span>
-      <span className="relative text-white font-medium">
-        <i className="fas fa-text-width mr-2"></i> Count (no spaces)
+      <span className="text-gray-800 font-medium">
+         <i className="fas fa-text-width mr-2 text-indigo-600"></i>Count (no spaces)
       </span>
     </button>
   );

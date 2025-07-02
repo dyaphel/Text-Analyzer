@@ -40,19 +40,18 @@ const DoubleSpaces = ({ text, showResult, setCleanText, setShowCleanText }) => {
   };
 
 return (
-    <button 
-      onClick={handleDoubleSpaces}
-      className={`${buttonBaseClasses} relative overflow-hidden bg-gradient-to-r from-indigo-900 to-purple-700 hover:from-indigo-500 hover:to-purple-400`}
-    >
-      <span className="absolute inset-0 bg-white/5"></span>
-      <span className="relative text-white font-medium flex items-center">
-        <span className="flex mr-2">
-          <span className="w-2 h-2 rounded-full bg-white mr-1"></span>
-          <span className="w-2 h-2 rounded-full bg-white"></span>
-        </span>
-        Check Double Spaces
-      </span>
-    </button>
+<button 
+  onClick={handleDoubleSpaces}
+  className={`${buttonBaseClasses} bg-white hover:bg-gray-100 border border-gray-200`}
+>
+  <span className="flex items-center text-gray-800 font-medium">
+    <span className="flex mr-2">
+      <span className="w-2 h-2 rounded-full bg-indigo-600 mr-1"></span>
+      <span className="w-2 h-2 rounded-full bg-indigo-600"></span>
+    </span>
+    Check Double Spaces
+  </span>
+</button>
   );
 };
 

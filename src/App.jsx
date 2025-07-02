@@ -23,41 +23,46 @@ function App() {
     setShowResults(true);
   };
 
- return (
+  return (
     <div className="bg-gray-50 min-h-screen">
-      <div className="container mx-auto px-4 py-8 max-w-4xl"> {/* Reduced py-10 to py-8 */}
+      <div className="container mx-auto px-4 py-8 max-w-6xl"> {/* Aumentato a max-w-6xl */}
         <Header />
         
-        {/* Reduced margin-bottom from mb-8 to mb-4 on TextInputArea */}
-        <TextInputArea text={text} setText={setText} clearText={clearText} className="mb-4" />
-        
-        {/* Buttons card with reduced top padding */}
-        <div className="bg-gradient-to-r from-indigo-700/90 to-purple-600/90 rounded-xl shadow-lg p-1 backdrop-blur-sm -mt-2"> {/* Added -mt-2 to pull up slightly */}
-          <div className="bg-white/5 rounded-lg p-4 backdrop-blur-xs">
-            <MainActionButton
-              text={text} 
-              showResult={showResult}
-              setCleanText={setCleanText}
-              setShowCleanText={setShowCleanText}
-            />
+        <div className="flex flex-col lg:flex-row gap-6"> {/* Aggiunto flex container */}
+          {/* Colonna sinistra con textarea e pulsanti */}
+          <div className="flex-1">
+            <TextInputArea text={text} setText={setText} clearText={clearText} className="mb-4" />
+            
+            {/* Buttons card con stile più chiaro */}
+            <div className="bg-gradient-to-r from-indigo-100 to-purple-100 rounded-xl shadow-lg p-1 -mt-2">
+              <div className="bg-white/80 rounded-lg p-4">
+                <MainActionButton
+                  text={text} 
+                  showResult={showResult}
+                  setCleanText={setCleanText}
+                  setShowCleanText={setShowCleanText}
+                />
+              </div>
+            </div>
+          </div>
+          
+          {/* Colonna destra per i risultati */}
+          <div className="flex-1">
+            {showResults && (
+              <ResultsDisplay 
+                title={result.title} 
+                content={result.content} 
+                isHTML={result.isHTML} 
+              />
+            )}
+            
+            {showCleanText && (
+              <CleanTextDisplay cleanText={cleanText} />
+            )}
           </div>
         </div>
-        
-        {/* Results sections remain the same */}
-        {showResults && (
-          <ResultsDisplay 
-            title={result.title} 
-            content={result.content} 
-            isHTML={result.isHTML} 
-          />
-        )}
-        
-        {showCleanText && (
-          <CleanTextDisplay cleanText={cleanText} />
-        )}
       </div>
     </div>
   );
 }
-
 export default App;
