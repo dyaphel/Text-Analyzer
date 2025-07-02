@@ -22,7 +22,7 @@ const ResultsDisplay = ({ title, content, isHTML, onClose  }) => {
       {/* Pulsante di chiusura */}
       <button 
         onClick={onClose}
-        className="absolute top-3 right-3 text-gray-400 hover:text-gray-600 transition-colors"
+        className="absolute top-3 right-3 text-gray-700 hover:text-gray-900 transition-colors duration-200 bg-gray-100 hover:bg-gray-200 px-3 py-2 rounded-lg"
       >
         <i className="fas fa-times"></i>
       </button>
