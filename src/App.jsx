@@ -3,6 +3,7 @@ import Header from './components/Header';
 import TextInputArea from './components/TextInputArea';
 import MainActionButton from './components/ActionButtons/MainActionButton';
 import ResultsDisplay from './components/ResultsDisplay';
+import CleanTextDisplay from './components/CleanTextDisplay';
 import './App.css';
 
 function App() {
@@ -63,25 +64,26 @@ function App() {
           </div>
           
           {/* Colonna destra per i risultati */}
-          {showResults && (
-            <div className="flex-1">
-              <ResultsDisplay 
-                title={result.title} 
-                content={result.content} 
-                isHTML={result.isHTML}
-                onClose={closeResults}
-              />
+          {(showResults || showCleanText) && (
+            <div className="flex-1 flex flex-col gap-6">
+              {showResults && (
+                <ResultsDisplay 
+                  title={result.title} 
+                  content={result.content} 
+                  isHTML={result.isHTML}
+                  onClose={closeResults}
+                />
+              )}
+
+              {showCleanText && (
+                <CleanTextDisplay 
+                  cleanText={cleanText} 
+                  onClose={closeCleanText}
+                />
+              )}
             </div>
           )}
-          
-          {showCleanText && (
-            <div className="flex-1">
-              <CleanTextDisplay 
-                cleanText={cleanText} 
-                onClose={closeCleanText}
-              />
-            </div>
-          )}
+
         </div>
       </div>
     </div>

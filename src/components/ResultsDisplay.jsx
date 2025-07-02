@@ -1,57 +1,28 @@
-import { useState } from 'react';
-
-const ResultsDisplay = ({ title, content, isHTML, onClose  }) => {
-  const [copyState, setCopyState] = useState({ 
-    text: 'Copy', 
-    icon: 'fa-copy' 
-  });
-  
-  const handleCopy = () => {
-    const textToCopy = document.createElement('textarea');
-    textToCopy.innerHTML = content;
-    navigator.clipboard.writeText(textToCopy.value || content);
-    
-    setCopyState({ text: 'Copied!', icon: 'fa-check' });
-    setTimeout(() => {
-      setCopyState({ text: 'Copy', icon: 'fa-copy' });
-    }, 2000);
-  };
-
+const ResultsDisplay = ({ title, content, isHTML, onClose }) => {
   return (
-      <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl shadow-lg border border-gray-200 relative">
-      {/* Pulsante di chiusura */}
-      <button 
-        onClick={onClose}
-        className="absolute top-3 right-3 text-gray-700 hover:text-gray-900 transition-colors duration-200 bg-gray-100 hover:bg-gray-200 px-3 py-2 rounded-lg"
-      >
+    <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl shadow-lg border border-gray-200 relative w-full max-w-2xl mx-auto overflow-hidden">
+      <button onClick={onClose} className="absolute top-3 right-3 text-gray-700 hover:text-gray-900 transition-colors duration-200 bg-gray-100 hover:bg-gray-200 px-3 py-2 rounded-lg">
         <i className="fas fa-times"></i>
       </button>
+
       <div className="p-6">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold text-gray-800">
-            {title}
-          </h2>
-          {isHTML && (
-            <button 
-              onClick={handleCopy}
-              className="flex items-center text-gray-700 hover:text-gray-900 transition-colors duration-200 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg"
-            >
-              <i className={`fas ${copyState.icon} mr-2`}></i>
-              {copyState.text}
-            </button>
-          )}
+          <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
         </div>
-        <div 
-          className="bg-gray-50 rounded-lg border border-gray-200 p-4 min-h-20 whitespace-pre-wrap"
-          dangerouslySetInnerHTML={isHTML ? { __html: content } : null}
-        >
-          {!isHTML && (
-            <span className="text-gray-800">{content}</span>
-          )}
-        </div>
+
+        {isHTML ? (
+          <div 
+            className="bg-gray-50 rounded-lg border border-gray-200 p-4 min-h-20 max-h-64 whitespace-pre-wrap overflow-y-auto"
+            dangerouslySetInnerHTML={{ __html: content }}
+          />
+        ) : (
+          <div className="bg-gray-50 rounded-lg border border-gray-200 p-4 max-h-64
+           overflow-y-auto break-words whitespace-pre-wrap text-gray-800 font-mono">
+            {content}
+          </div>
+        )}
       </div>
     </div>
   );
 };
-
 export default ResultsDisplay;
