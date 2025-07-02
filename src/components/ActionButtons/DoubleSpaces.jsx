@@ -27,7 +27,8 @@ const DoubleSpaces = ({ text, showResult, setCleanText, setShowCleanText }) => {
     showResult(
       'Double Spaces Detected', 
       highlightedText,
-      true // isHTML
+      true,
+      true
     );
 
     // Passa il testo pulito a CleanTextDisplay

@@ -19,10 +19,11 @@ function App() {
     setShowCleanText(false);
   };
 
-  const showResult = (title, content, isHTML = false) => {
-    setResult({ title, content, isHTML });
-    setShowResults(true);
-  };
+const showResult = (title, content, isHTML = false, keepCleanTextOpen = false) => {
+  setResult({ title, content, isHTML });
+  setShowResults(true);
+  if (!keepCleanTextOpen) setShowCleanText(false); 
+};
 
   const closeResults = () => {
     setShowResults(false);
@@ -31,6 +32,8 @@ function App() {
   const closeCleanText = () => {
     setShowCleanText(false);
   };
+
+  
 
     return (
     <div className="bg-gray-50 min-h-screen">
@@ -64,7 +67,7 @@ function App() {
           </div>
           
           {/* Colonna destra per i risultati */}
-          {(showResults || showCleanText) && (
+          {(showResults) && (
             <div className="flex-1 flex flex-col gap-6">
               {showResults && (
                 <ResultsDisplay 
