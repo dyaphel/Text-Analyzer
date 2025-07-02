@@ -1,6 +1,7 @@
 import CountWithSpaces from './CountWithSpaces';
 import CountWithoutSpaces from './CountWithoutSpaces';
 import CountWords from './CountWords';
+//import RemoveWatermark from './RemoveWatermark';
 import DoubleSpaces from './DoubleSpaces';
 const ActionButtons = ({ text, showResult, setCleanText, setShowCleanText }) => {
   return (
@@ -16,6 +17,13 @@ const ActionButtons = ({ text, showResult, setCleanText, setShowCleanText }) => 
           setShowCleanText={setShowCleanText}
         />
       </div>
+
+      {/* <RemoveWatermark 
+        text={text} 
+        showResult={showResult}
+        setCleanText={setCleanText}
+        setShowCleanText={setShowCleanText}
+      /> */}
     </div>
   );
 };
