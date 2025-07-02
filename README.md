@@ -54,6 +54,8 @@ For major changes, please open an issue first to discuss your proposed changes.
 
 ## 📩 Contact  
 If you have any questions or feedback, feel free to reach out!
-### 📩 e-mail: dyaphel00@gmail.com   
+#### 📩 e-mail: dyaphel00@gmail.com  
+
+<hr style="border: 0.4px margin: 1em 0;">
 
 ### 🐉 Dragon's Playground
