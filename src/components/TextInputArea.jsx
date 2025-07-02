@@ -1,6 +1,7 @@
-const TextInputArea = ({ text, setText, clearText, className, onClose   }) => {
+const TextInputArea = ({ text, setText, clearText, className, onClose }) => {
   return (
-     <div className={`p-6 bg-white rounded-xl shadow-lg border border-gray-200 ${className}`}>
+    <div className={`p-6 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl shadow-lg border border-indigo-100  ${className}`}>
+         
       <div className="relative z-10">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-semibold text-gray-800">
@@ -14,7 +15,7 @@ const TextInputArea = ({ text, setText, clearText, className, onClose   }) => {
           </button>
         </div>
         
-        <div className="relative bg-white rounded-lg border border-gray-300 p-4 transition-all duration-300 hover:border-indigo-400 focus-within:border-indigo-500">
+        <div className="relative bg-white rounded-lg border border-indigo-200 p-4 transition-all duration-300 hover:border-indigo-400 focus-within:border-indigo-300">
           <textarea
             value={text}
             onChange={(e) => setText(e.target.value)}

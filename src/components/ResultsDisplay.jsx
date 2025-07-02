@@ -18,8 +18,7 @@ const ResultsDisplay = ({ title, content, isHTML, onClose  }) => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg border border-gray-200">
-        <div className="bg-white rounded-xl shadow-lg border border-gray-200 relative">
+      <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl shadow-lg border border-gray-200 relative">
       {/* Pulsante di chiusura */}
       <button 
         onClick={onClose}
@@ -52,7 +51,6 @@ const ResultsDisplay = ({ title, content, isHTML, onClose  }) => {
         </div>
       </div>
     </div>
-  </div>
   );
 };
 

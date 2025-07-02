@@ -5,7 +5,7 @@ import CountWords from './CountWords';
 import DoubleSpaces from './DoubleSpaces';
 const ActionButtons = ({ text, showResult, setCleanText, setShowCleanText }) => {
   return (
-    <div className="p-6 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl shadow-lg mb-6 border border-indigo-100">
+    <div className="p-6 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl shadow-lg border border-indigo-100">
       <div className="flex flex-wrap gap-4">
         <CountWithSpaces text={text} showResult={showResult} />
         <CountWithoutSpaces text={text} showResult={showResult} />
