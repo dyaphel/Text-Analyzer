@@ -1,6 +1,7 @@
 import CountWithSpaces from './CountWithSpaces';
 import CountWithoutSpaces from './CountWithoutSpaces';
 import CountWords from './CountWords';
+import LetterFrequency from './LetterFrequency';
 //import RemoveWatermark from './RemoveWatermark';
 import DoubleSpaces from './DoubleSpaces';
 const ActionButtons = ({ text, showResult, setCleanText, setShowCleanText }) => {
@@ -16,6 +17,7 @@ const ActionButtons = ({ text, showResult, setCleanText, setShowCleanText }) => 
           setCleanText={setCleanText}
           setShowCleanText={setShowCleanText}
         />
+        <LetterFrequency text={text} showResult={showResult} />
       </div>
 
       {/* <RemoveWatermark 
