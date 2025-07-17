@@ -1,6 +1,8 @@
 # Text Analyzer
 
-A React application that provides text analysis tools with a sleek UI featuring gradient backgrounds and smooth animations.
+A React application that provides text analysis tools.
+
+🔗 **Live Demo**: [https://dyaphel.github.io/Text-Analyzer/](https://dyaphel.github.io/Text-Analyzer/)
 
 ## 🚀 Features
 
@@ -15,6 +17,7 @@ A React application that provides text analysis tools with a sleek UI featuring 
    - Count characters (including/excluding spaces)
    - Count words in your text
    - Check for and fix double spaces
+   - Letter frequency
 3. **View results** displayed below
 4. **Copy processed text** with the copy button
 
@@ -28,22 +31,6 @@ src/
 │ └── TextInputArea/ # Main text input component
 ├── App.js # Main application component
 └── index.js # Application entry point
-   ```
-
-## 🛠️ Setup and Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/text-analyzer.git
-   ```
-2.Install dependencies:
- ```bash
-  cd text-analyzer
-  npm install
-   ```
-3.Start the development:
- ```bash
-  npm run dev
    ```
 
 ## 🤝 Contributing
