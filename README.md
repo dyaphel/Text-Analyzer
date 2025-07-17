@@ -19,6 +19,7 @@ A React application that provides text analysis tools with a sleek UI featuring 
 4. **Copy processed text** with the copy button
 
 ## 🗂️ Project Structure
+   ```bash
 src/
 ├── components/
 │ ├── ActionButtons/ # All analysis buttons
@@ -27,6 +28,7 @@ src/
 │ └── TextInputArea/ # Main text input component
 ├── App.js # Main application component
 └── index.js # Application entry point
+   ```
 
 ## 🛠️ Setup and Installation
 
