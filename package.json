@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://dyaphel.github.io/Text-Analyzer",
-
   "scripts": {
     "dev": "vite",
     "build": "vite build",
